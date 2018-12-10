@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>portfolio</title>
 </head>
 <body>
 <div class="container">
-    <img src="img/person1.jpg" alt="Profile picture">
-    <h2>John Doe</h2>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
+    <header id="main-header">
+        <div class="row no-gutters">
+            <div class="col-lg-4 col-md-5">
+                <img src="img/person1.jpg" alt="">
+            </div>
+            <div class="col-lg-8 col-md-7">
+                <div class="d-flex flex-column">
+                    <div class="p-5 bg-dark text-white">
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <h1 class="display-4">John Doe</h1>
+                            <div class="d-none d-md-block">
+                                <a href="http://twitter.com" class="text-white">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="http://facebook.com" class="text-white">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="http://instagram.com" class="text-white">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="http://github.com" class="text-white">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-black">
+                        Experienced Full Stack Web Developer
+                    </div>
+                    <div>
+                        <div class="d-flex flex-row text-white align-items-stretch text-center">
+                            <div class="port-item p-4 bg-primary" data-toggle="collapse" data-target="#home">
+                                <i class="fas fa-home fa-2x d-block"></i>
+                                <span class="d-none d-sm-block">Home</span>
+                            </div>
+                            <div class="port-item p-4 bg-success" data-toggle="collapse" data-target="#resume">
+                                <i class="fas fa-graduation-cap fa-2x d-block"></i>
+                                <span class="d-none d-sm-block">Resume</span>
+                            </div>
+                            <div class="port-item p-4 bg-warning" data-toggle="collapse" data-target="#work">
+                                <i class="fas fa-folder-open fa-2x d-block"></i>
+                                <span class="d-none d-sm-block">Work</span>
+                            </div>
+                            <div class="port-item p-4 bg-danger" data-toggle="collapse" data-target="#contact">
+                                <i class="fas fa-envelope fa-2x d-block"></i>
+                                <span class="d-none d-sm-block">Contact</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
+    </header>
 </div>
 </body>
 </html>
