@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
           crossorigin="anonymous">
+    <script src="/pvk/menu/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function(){
+            $("#praedlink").click(function(){
+                $('#praed').toggleClass('collapse');
+            })
+            $("#supidlink").click(function(){
+                $('#supid').toggleClass('collapse');
+            })
+            $("#joogidlink").click(function(){
+                $('#joogid').toggleClass('collapse');
+            })
+            $("#maguslink").click(function(){
+                $('#magus').toggleClass('collapse');
+            })
+        })
+    </script>
+
     <title>Söökla</title>
 </head>
 <body>
@@ -17,7 +35,7 @@
             <div id="accordion">
                 <div class="card m-3">
                     <div class="card-header alert-dark">
-                        <a href="#praed" data-parent="#accordion" data-toggle="collapse" >
+                        <a id="praedlink" href="#praed" data-parent="#accordion" data-toggle="collapse" >
                             <h2 class="text-dark">PRAED <i class="fas fa-utensils"></i></h2>
                         </a>
                     </div>
@@ -62,7 +80,7 @@
                 </div>
                 <div class="card m-3">
                     <div class="card-header alert-dark">
-                        <a href="#supid" data-parent="#accordion" data-toggle="collapse" >
+                        <a id="supidlink" href="#supid" data-parent="#accordion" data-toggle="collapse" >
                             <h2 class="text-dark">SUPID <i class="fas fa-utensil-spoon"></i></h2>
                         </a>
                     </div>
@@ -80,7 +98,7 @@
                 </div>
                 <div class="card m-3">
                     <div class="card-header alert-dark">
-                        <a href="#magus" data-parent="#accordion" data-toggle="collapse" >
+                        <a id="maguslink" href="#magus" data-parent="#accordion" data-toggle="collapse" >
                             <h2 class="text-dark">MAGUSTOIDUD <i class="fas fa-cookie-bite"></i></h2>
                         </a>
                     </div>
@@ -98,7 +116,7 @@
 
                 <div class="card m-3">
                     <div class="card-header alert-dark">
-                        <a href="#joogid" data-parent="#accordion" data-toggle="collapse" >
+                        <a id="joogidlink" href="#joogid" data-parent="#accordion" data-toggle="collapse" >
                             <h2 class="text-dark">JOOGID <i class="fas fa-glass-whiskey"></i></h2>
                         </a>
                     </div>
@@ -124,4 +142,4 @@
     </div>
 </div>
 </body>
-</html> 
+</html>
