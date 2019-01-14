@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+          crossorigin="anonymous">
+    <script src="/pvk/menu/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $("document").ready(function(){
+        $("#praedlink").click(function(){
+            $("#praed").toggleClass("collapse");
+        })
+            $("#supidlink").click(function(){
+                $("#supid").toggleClass("collapse");
+            })
+            $("#joogidlink").click(function(){
+                $("#joogid").toggleClass("collapse");
+            })
+            $("#maguslink").click(function(){
+                $("#magus").toggleClass("collapse");
+            })
+        })
+    </script>
+
+    <title>Söökla</title>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col">
+            <div id="accordion">
+                <div class="card m-3">
+                    <div class="card-header alert-dark">
+                        <a id="praedlink" href="#praed" data-parent="#accordion" data-toggle="collapse" >
+                            <h2 class="text-dark">PRAED <i class="fas fa-utensils"></i></h2>
+                        </a>
+                    </div>
+                    <div id="praed" class="collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="mb-0">Sealihapada ploomide ja aprikoosiga <br>
+                                    <span class="small text-secondary">sealihapada, lisand, salat, leib</span><br>
+                                    <span class="badge badge-info">2.65€</span>
+                                    <span class="badge badge-success">2.25€</span>
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-0">Praetud kanakints <br>
+                                    <span class="small text-secondary">praetud kana, lisand, salat, leib</span><br>
+                                    <span class="badge badge-info">2.50€</span>
+                                    <span class="badge badge-success">2.13€</span>
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-0">Hakklihakaste <br>
+                                    <span class="small text-secondary">hakklihakaste, lisand, salat, leib</span><br>
+                                    <span class="badge badge-info">2.45€</span>
+                                    <span class="badge badge-success">2.08€</span>
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-0">Kartul, kaste, salat, leib <br>
+                                    <span class="badge badge-info">1.38€</span>
+                                    <span class="badge badge-success">1.17€</span>
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-0">Hakklihakaste 1/2<br>
+                                    <span class="small text-secondary">hakklihakaste, lisand, salat, leib</span><br>
+                                    <span class="badge badge-info">1.30€</span>
+                                    <span class="badge badge-success">1.11€</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card m-3">
+                    <div class="card-header alert-dark">
+                        <a id="supidlink" href="#supid" data-parent="#accordion" data-toggle="collapse" >
+                            <h2 class="text-dark">SUPID <i class="fas fa-utensil-spoon"></i></h2>
+                        </a>
+                    </div>
+                    <?php
+                    echo '
+                    ?>
+                    <div id="supid" class="collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="mb-0">Rassolnik <br>
+                                    <span class="small text-secondary">supp, hapukoor, leib</span><br>
+                                    <span class="badge badge-info">1.10€</span>
+                                    <span class="badge badge-success">0.94€</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    ';?>
+                </div>
+                <div class="card m-3">
+                    <div class="card-header alert-dark">
+                        <a id="maguslink" href="#magus" data-parent="#accordion" data-toggle="collapse" >
+                            <h2 class="text-dark">MAGUSTOIDUD <i class="fas fa-cookie-bite"></i></h2>
+                        </a>
+                    </div>
+                    <div id="magus" class="collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="mb-0">Rosinakisell vahukoorega <br>
+                                    <span class="badge badge-info">1.05€</span>
+                                    <span class="badge badge-success">0.90€</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card m-3">
+                    <div class="card-header alert-dark">
+                        <a id="joogidlink" href="#joogid" data-parent="#accordion" data-toggle="collapse" >
+                            <h2 class="text-dark">JOOGID <i class="fas fa-glass-whiskey"></i></h2>
+                        </a>
+                    </div>
+                    <div id="joogid" class="collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="mb-0">Mahl <span class="badge badge-info">0.60€</span></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-0">Morss <span class="badge badge-info">0.25€</span></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-0">Piim <span class="badge badge-info">0.30€</span></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-0">Keefir <span class="badge badge-info">0.39€</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
