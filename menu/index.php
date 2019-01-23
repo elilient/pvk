@@ -40,6 +40,9 @@
                             <h2 class="text-dark">PRAED <i class="fas fa-utensils"></i></h2>
                         </a>
                     </div>
+                    <?php
+                    echo '
+                    
                     <div id="praed" class="collapse">
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -78,6 +81,7 @@
                             </li>
                         </ul>
                     </div>
+                    ';?>
                 </div>
                 <div class="card m-3">
                     <div class="card-header alert-dark">
