@@ -1,155 +1,98 @@
+<?php
+require_once 'menu.php';
+require_once 'func.php'
+?>
+<?php
+pais();
+?>
 
-<!DOCTYPE html>
-<html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-          crossorigin="anonymous">
-    <script src="/pvk/menu/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript">
-    $("document").ready(function(){
-        $("#praedlink").click(function(){
-            $("#praed").toggleClass("collapse");
-        })
-            $("#supidlink").click(function(){
-                $("#supid").toggleClass("collapse");
-            })
-            $("#joogidlink").click(function(){
-                $("#joogid").toggleClass("collapse");
-            })
-            $("#maguslink").click(function(){
-                $("#magus").toggleClass("collapse");
-            })
-        })
-    </script>
-
-    <title>Söökla</title>
-</head>
-<body>
-<div class="container-fluid text-center">
-    <div class="row">
-        <div class="col">
-            <div id="accordion">
-                <div class="card m-3">
-                    <div class="card-header alert-dark">
-                        <a id="praedlink" href="#praed" data-parent="#accordion" data-toggle="collapse" >
-                            <h2 class="text-dark">PRAED <i class="fas fa-utensils"></i></h2>
-                        </a>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header alert-dark">
+                            <a href="#praed" data-toggle="collapse" data-target="#praed" data-parent="#accordion"><h2 class="text-dark">Praed <i class="fas fa-utensils"></i></h2></a>
+                        </div>
+                        <?php
+                        echo '<div id="praed" class="collapse">';
+                        foreach ($praed as $praad=>$info){
+                            echo '<ul class="list-group">';
+                            echo '<li class="list-group-item">';
+                            echo '<p class="mb-0">'.$info['nimetus'].' <br>';
+                            echo '<span class="small text-secondary">'.$info['kirjeldus'].'</span><br>';
+                            echo '<span class="badge badge-info">'.$info['hind'].'&euro;</span>';
+                            echo '<span class="badge badge-success">'.soodus($info['hind'], 15).'&euro;</span>';
+                            echo '</p>
+                                    </li>';
+                            echo '</ul>';
+                        }
+                        echo '</div>';
+                        ?>
                     </div>
-                    <?php
-                    $praed = array(
-                            array('nimetus' => 'Sealihapada ploomide ja aprikoosiga',
-                                'kirjeldus' => 'sealihapada, lisand, salat, leib',
-                                'hind' => 2.65),
-                            array('nimetus' => 'Praetud kanakints',
-                                'kirjeldus' => 'praetud kana, lisand, salat, leib',
-                                'hind' => 2.50),
-                            array('nimetus' => 'Hakklihakaste',
-                                'kirjeldus' => 'hakklihakaste, lisand, salat, leib',
-                                'hind' => 2.45),
-                            array('nimetus' => 'Kartul, kaste, salat, leib',
-                                'kirjeldus' =>'',
-                                'hind' => 2.45),
-                            array('nimetus' => 'Hakklihakaste 1/2',
-                                'kirjeldus' => 'hakklihakaste, lisand, salat, leib',
-                                'hind' => 1.30)
-                    );
-                    echo '<div id="praed" class="collapse">';
-                    foreach ($praed as $praad=>$info) {
-                        echo '<ul class="list-group">';
-                        echo '<li class="list-group-item">';
-                        echo '<p class="mb-0">' . $info['nimetus'] . '<br>';
-                        echo '<span class="small text-secondary">' . $info['kirjeldus'] . '</span><br>';
-                        echo '<span class="badge badge-info">' . $info['hind'] . '€</span>';
-                        echo '<span class="badge badge-success">2.25€</span>';
-                        echo '</p>
-                            </li>';
-                        echo '</ul>';
-                    }
-
-
-                    echo '</div>';'
-                    ';
-                    ?>
-                </div>
-                <div class="card m-3">
-                    <div class="card-header alert-dark">
-                        <a id="supidlink" href="#supid" data-parent="#accordion" data-toggle="collapse" >
-                            <h2 class="text-dark">SUPID <i class="fas fa-utensil-spoon"></i></h2>
-                        </a>
+                    <div class="card">
+                        <div class="card-header alert-dark">
+                            <a href="#supp" data-toggle="collapse" data-target="#supp" data-parent="#accordion"><h2 class="text-dark">Supid <i class="fas fa-utensil-spoon"></i></h2></a>
+                        </div>
+                        <?php
+                        echo '<div id="supp" class="collapse">';
+                        foreach ($supid as $suppid=>$info){
+                            echo '<ul class="list-group">';
+                            echo '<li class="list-group-item">';
+                            echo '<p class="mb-0">'.$info['nimetus'].' <br>';
+                            echo '<span class="small text-secondary">'.$info['kirjeldus'].'</span><br>';
+                            echo '<span class="badge badge-info">'.$info['hind'].'&euro;</span>';
+                            echo '<span class="badge badge-success">'.soodus($info['hind'], 15).'&euro;</span>';
+                            echo '</p>
+                                    </li>';
+                            echo '</ul>';
+                        }
+                        echo '</div>';
+                        ?>
                     </div>
-                    <?php
-                    echo '
-                    
-                    <div id="supid" class="collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p class="mb-0">Rassolnik <br>
-                                    <span class="small text-secondary">supp, hapukoor, leib</span><br>
-                                    <span class="badge badge-info">1.10€</span>
-                                    <span class="badge badge-success">0.94€</span>
-                                </p>
-                            </li>
-                        </ul>
+                    <div class="card">
+                        <div class="card-header alert-dark">
+                            <a href="#magus" data-toggle="collapse" data-target="#magus" data-parent="#accordion" class="maguslink"><h2 class="text-dark">Magustoidud <i class="fas fa-cookie-bite"></i></h2></a>
+                        </div>
+                        <?php
+                        echo '<div id="magus" class="collapse">';
+                        foreach ($magusad as $magus=>$info){
+                            echo '<ul class="list-group">';
+                            echo '<li class="list-group-item">';
+                            echo '<p class="mb-0">'.$info['nimetus'].' <br>';
+                            echo '<span class="small text-secondary">'.$info['kirjeldus'].'</span><br>';
+                            echo '<span class="badge badge-info">'.$info['hind'].'&euro;</span>';
+                            echo '<span class="badge badge-success">'.soodus($info['hind'], 15).'&euro;</span>';
+                            echo '</p>
+                                    </li>';
+                            echo '</ul>';
+                        }
+                        echo '</div>';
+                        ?>
                     </div>
-                    ';?>
-                </div>
-                <div class="card m-3">
-                    <div class="card-header alert-dark">
-                        <a id="maguslink" href="#magus" data-parent="#accordion" data-toggle="collapse" >
-                            <h2 class="text-dark">MAGUSTOIDUD <i class="fas fa-cookie-bite"></i></h2>
-                        </a>
+                    <div class="card">
+                        <div class="card-header alert-dark">
+                            <a href="#jook" data-toggle="collapse" data-target="#jook" data-parent="#accordion" class="jooklink"><h2 class="text-dark">Joogid <i class="fas fa-glass-whiskey"></i></h2></a>
+                        </div>
+                        <?php
+                        echo '<div id="jook" class="collapse">';
+                        foreach ($joogid as $jook=>$info){
+                            echo '<ul class="list-group">';
+                            echo '<li class="list-group-item">';
+                            echo '<p class="mb-0">'.$info['nimetus'].' ';
+                            echo '<span class="small text-secondary">'.$info['kirjeldus'].'</span>';
+                            echo '<span class="badge badge-info">'.$info['hind'].'&euro;</span>';
+                            echo '</p>
+                                    </li>';
+                            echo '</ul>';
+                        }
+                        echo '</div>';
+                        ?>
                     </div>
-                    <?php
-                    echo '
-                    
-                    <div id="magus" class="collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p class="mb-0">Rosinakisell vahukoorega <br>
-                                    <span class="badge badge-info">1.05€</span>
-                                    <span class="badge badge-success">0.90€</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                        ';?>
-                </div>
-
-                <div class="card m-3">
-                    <div class="card-header alert-dark">
-                        <a id="joogidlink" href="#joogid" data-parent="#accordion" data-toggle="collapse" >
-                            <h2 class="text-dark">JOOGID <i class="fas fa-glass-whiskey"></i></h2>
-                        </a>
-                    </div>
-                    <?php
-                    echo '
-                    
-                    <div id="joogid" class="collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p class="mb-0">Mahl <span class="badge badge-info">0.60€</span></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="mb-0">Morss <span class="badge badge-info">0.25€</span></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="mb-0">Piim <span class="badge badge-info">0.30€</span></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="mb-0">Keefir <span class="badge badge-info">0.39€</span></p>
-                            </li>
-                        </ul>
-                    </div>
-                    ';?>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+<?php
+jalus();
+?>
