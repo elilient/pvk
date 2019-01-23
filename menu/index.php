@@ -129,6 +129,9 @@
                             <h2 class="text-dark">JOOGID <i class="fas fa-glass-whiskey"></i></h2>
                         </a>
                     </div>
+                    <?php
+                    echo '
+                    
                     <div id="joogid" class="collapse">
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -145,6 +148,7 @@
                             </li>
                         </ul>
                     </div>
+                    ';?>
                 </div>
             </div>
         </div>
