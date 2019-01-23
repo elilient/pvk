@@ -87,7 +87,7 @@
                     </div>
                     <?php
                     echo '
-                    ?>
+                    
                     <div id="supid" class="collapse">
                         <ul class="list-group">
                             <li class="list-group-item">
