@@ -41,47 +41,40 @@
                         </a>
                     </div>
                     <?php
-                    echo '
-                    
-                    <div id="praed" class="collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p class="mb-0">Sealihapada ploomide ja aprikoosiga <br>
-                                    <span class="small text-secondary">sealihapada, lisand, salat, leib</span><br>
-                                    <span class="badge badge-info">2.65€</span>
-                                    <span class="badge badge-success">2.25€</span>
-                                </p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="mb-0">Praetud kanakints <br>
-                                    <span class="small text-secondary">praetud kana, lisand, salat, leib</span><br>
-                                    <span class="badge badge-info">2.50€</span>
-                                    <span class="badge badge-success">2.13€</span>
-                                </p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="mb-0">Hakklihakaste <br>
-                                    <span class="small text-secondary">hakklihakaste, lisand, salat, leib</span><br>
-                                    <span class="badge badge-info">2.45€</span>
-                                    <span class="badge badge-success">2.08€</span>
-                                </p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="mb-0">Kartul, kaste, salat, leib <br>
-                                    <span class="badge badge-info">1.38€</span>
-                                    <span class="badge badge-success">1.17€</span>
-                                </p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="mb-0">Hakklihakaste 1/2<br>
-                                    <span class="small text-secondary">hakklihakaste, lisand, salat, leib</span><br>
-                                    <span class="badge badge-info">1.30€</span>
-                                    <span class="badge badge-success">1.11€</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    ';?>
+                    $praed = array(
+                            array('nimetus' => 'Sealihapada ploomide ja aprikoosiga',
+                                'kirjeldus' => 'sealihapada, lisand, salat, leib',
+                                'hind' => 2.65),
+                            array('nimetus' => 'Praetud kanakints',
+                                'kirjeldus' => 'praetud kana, lisand, salat, leib',
+                                'hind' => 2.50),
+                            array('nimetus' => 'Hakklihakaste',
+                                'kirjeldus' => 'hakklihakaste, lisand, salat, leib',
+                                'hind' => 2.45),
+                            array('nimetus' => 'Kartul, kaste, salat, leib',
+                                'kirjeldus' =>'',
+                                'hind' => 2.45),
+                            array('nimetus' => 'Hakklihakaste 1/2',
+                                'kirjeldus' => 'hakklihakaste, lisand, salat, leib',
+                                'hind' => 1.30)
+                    );
+                    echo '<div id="praed" class="collapse">';
+                    foreach ($praed as $praad=>$info) {
+                        echo '<ul class="list-group">';
+                        echo '<li class="list-group-item">';
+                        echo '<p class="mb-0">' . $info['nimetus'] . '<br>';
+                        echo '<span class="small text-secondary">' . $info['kirjeldus'] . '</span><br>';
+                        echo '<span class="badge badge-info">' . $info['hind'] . '€</span>';
+                        echo '<span class="badge badge-success">2.25€</span>';
+                        echo '</p>
+                            </li>';
+                        echo '</ul>';
+                    }
+
+
+                    echo '</div>';'
+                    ';
+                    ?>
                 </div>
                 <div class="card m-3">
                     <div class="card-header alert-dark">
