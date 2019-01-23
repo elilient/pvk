@@ -107,6 +107,9 @@
                             <h2 class="text-dark">MAGUSTOIDUD <i class="fas fa-cookie-bite"></i></h2>
                         </a>
                     </div>
+                    <?php
+                    echo '
+                    
                     <div id="magus" class="collapse">
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -117,6 +120,7 @@
                             </li>
                         </ul>
                     </div>
+                        ';?>
                 </div>
 
                 <div class="card m-3">
