@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../php_alused/.idea/php_alused.iml" filepath="$PROJECT_DIR$/../php_alused/.idea/php_alused.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pvk.iml" filepath="$PROJECT_DIR$/.idea/pvk.iml" />
     </modules>
   </component>
