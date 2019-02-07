@@ -1,6 +1,6 @@
-# Programming tools usage 
-## Used software
-[PHPStorm](https://www.jetbrains.com/phpstorm/)
-[PHPStorm Features](https://www.jetbrains.com/phpstorm/features/)
-### EE version
-[GitHub](https://github.com/elilient/pvk/blob/master/README.md)
+# Programming Tools
+## Software
+* [git](https://git-scm.com/download/win) - Version Control System
+* [PhpStrom](https://www.jetbrains.com/phpstorm/?fromMenu) - IDE
+## Multilanguage documentation
+* [estonian](https://github.com/AnnaKarutina/pvk_vs18_2/blob/master/README.md)

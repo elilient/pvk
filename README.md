@@ -1,7 +1,6 @@
 # Programmeerimisvahendite kasutamine
-## Kasutatav tarkvara
-[PHPStorm](https://www.jetbrains.com/phpstorm/)
-[PHPStorm Features](https://www.jetbrains.com/phpstorm/features/)
-
-### Inglise keelne versioon
-[GitHub](https://github.com/elilient/pvk/blob/master/README.en.md)
+## Tarkvara
+* [git](https://git-scm.com/download/win) - versioonihalduss&uuml;steemina (VCS)
+* [PhpStrom](https://www.jetbrains.com/phpstorm/?fromMenu) - IDE
+## Dokumentatsiooni versioonid teistes keeltes
+* [english](https://github.com/AnnaKarutina/pvk_vs18_2/blob/master/README.en.md)
